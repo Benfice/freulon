@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block cssfile %}<link href="{{url_for('static', filename='styles/lightbox.css')}}" rel="stylesheet" />{% endblock %}
+{% block title %}Photo - Street{% endblock %}
+{% block navphoto %}active{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+      <div class="jumbotron bg-white text-center">
+          <h1>Street</h1>
+      </div>
+    </div>
+
+    <div class="row-gallery">
+      <div class="column-gallery">
+      {% for street_pic in street_pics[::4] %}
+          <a href="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" data-lightbox="street">
+            <img src="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" alt="street picture">
+          </a>
+      {% endfor %}
+      </div>
+
+      <div class="column-gallery">
+      {% for street_pic in street_pics[1::4] %}
+          <a href="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" data-lightbox="street">
+            <img src="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" alt="street picture">
+          </a>
+      {% endfor %}
+      </div>
+
+      <div class="column-gallery">
+      {% for street_pic in street_pics[2::4] %}
+          <a href="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" data-lightbox="street">
+            <img src="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" alt="street picture">
+          </a>
+      {% endfor %}
+      </div>
+
+      <div class="column-gallery">
+      {% for street_pic in street_pics[3::4] %}
+          <a href="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" data-lightbox="street">
+            <img src="{{url_for('static', filename='pics/street_pics/' + street_pic)}}" alt="street picture">
+          </a>
+      {% endfor %}
+      </div>
+
+    </div>
+
+    <script src="{{url_for('static',filename='lightbox-plus-jquery.js')}}"></script>
+{% endblock %}

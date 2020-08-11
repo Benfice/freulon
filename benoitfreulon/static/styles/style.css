@@ -1,0 +1,356 @@
+/* Font */
+p, td {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+th {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+/* Nabvar */
+
+.navbar-brand, .nav-link {
+    color: #013C4C;
+}
+
+.navbar-brand:hover, .nav-link:hover, .active .nav-link {
+    color: #01949A;
+}
+
+.navbar-brand {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 3em;
+}
+
+.nav-item {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+}
+
+.navbar-toggler-icon {
+  color: #013C4C;
+}
+
+@media screen and (max-width: 767.98px) {
+  .navbar-brand {
+    font-size: 2.5em;
+  }
+
+  .nav-item {
+    font-size: 1em;
+  }
+}
+
+
+/* Header */
+.jumbotron {
+  padding: 0.5rem 2rem 1rem 2rem;
+  margin-bottom: 0;
+  max-width: 100%;
+}
+
+.jumbotron h1 {
+  max-width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  color: #01949A;
+}
+
+.jumbotron h2 {
+  font-family: 'Reenie Beanie', cursive;
+  color: #01949A;
+  font-size: 3em;
+}
+
+@media screen and (max-width: 767.98px) {
+  .jumbotron h1 {
+    font-size: 2em;
+  }
+
+  .jumbotron h2 {
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .jumbotron h2 {
+    display: none;
+  }
+}
+
+
+/* Photo menu */
+
+.photocontainer {
+  display: flex;
+  width: 100%;
+  padding: 1% 2%;
+  box-sizing: border-box;
+  height: calc(100vh - 100px);
+}
+
+.box-photo {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+}
+
+.box-photo > a img {
+  width: 200%;
+  height: calc(100% - 10vh);
+  object-fit: cover;
+  transition: .5s;
+}
+
+.box-photo > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+  background-color: #013C4C;
+  color: white;
+}
+
+.box-photo:hover { flex: 1 1 50%; }
+.box-photo:hover > a img {
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .box-photo > span {
+    font-size: 3vh;
+    line-height: 3.4;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .photocontainer {
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .box-photo {
+      margin: 2% 0;
+  }
+}
+
+/* Display gallery pages Street, Portrait, Event */
+
+.row-gallery {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column-gallery {
+  box-sizing: border-box;
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column-gallery a img {
+  box-sizing: border-box;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column-gallery {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column-gallery {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* End display gallery */
+
+/* Margin photo gallery
+
+.img-fluid {
+  margin-bottom: 20px;
+}
+*/
+
+
+
+/* Logo web display */
+.row-logos {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+}
+
+.logo img {
+  max-height: 120px;
+}
+
+.logo {
+  text-align: center;
+  padding-bottom: 2vh;
+}
+
+/* Web - Table */
+
+.table-web thead tr {
+  background-color: #013C4C;
+  color: white;
+}
+
+.table-web tbody tr:nth-of-type(2n+1) {
+  background-color: #01949A;
+  color: white;
+}
+
+.table-web tbody tr:nth-of-type(2n) {
+  background-color: #013C4C;
+  color: white;
+}
+
+.table-web a, .table-web a:hover {
+  color: white;
+}
+
+@media screen and (max-width: 275px) {
+  .container-web {
+    width: 275px;
+    padding: 5px;
+  }
+}
+
+
+/* About page */
+
+.row-about {
+  background-color: #013C4C;
+  color: white;
+  min-height: 500px;
+  height: calc(75vh - 98px);
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+}
+
+#about-carousel {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about-pic {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding-left: 50px;
+}
+
+.about-text {
+  padding-left: 35px;
+  padding-right: 80px;
+  height: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text h1 {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 4em;
+  padding-bottom: 30px;
+}
+
+.carousel-control-prev {
+  width: 50px;
+  height: 50px;
+  background-color: #023440;
+  border-radius: 50%;
+  left: 10px;
+  top: calc(50% - 25px);
+}
+
+.carousel-control-next {
+  width: 50px;
+  height: 50px;
+  background-color: #023440;
+  border-radius: 50%;
+  right: 10px;
+  top: calc(50% - 25px);
+}
+
+@media screen and (max-width: 991.98px) {
+  .row-about {
+    height: 100%;
+  }
+
+  .about-pic {
+    padding: 25px 30px;
+    align-items: start;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .about-text {
+    padding: 15px 30px;
+    height: 400px;
+  }
+
+  .carousel-control-prev {
+    top: 213px;
+  }
+
+  .carousel-control-next {
+    top: 213px;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .about-pic {
+    padding: 15px 30px;
+  }
+
+  .carousel-control-prev {
+    top: 160.12px;
+  }
+
+  .carousel-control-next {
+    top: 160.12px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container-about {
+    padding: 5px;
+  }
+
+  .about-text h1 {
+    font-size: 2.2em;
+  }
+
+  .about-text p {
+    font-size: 0.8em;
+  }
+}

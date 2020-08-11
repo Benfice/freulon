@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block title %}About{% endblock %}
+{% block navabout %}active{% endblock %}
+{% block content %}
+    <div class="container-fluid container-about">
+
+      <div class="jumbotron bg-white text-center">
+        <h1>Get to know me</h1>
+        <h2>Some facts about me</h2>
+      </div>
+
+      <div class="container container-about">
+
+        <div class="row-about">
+          <div id="about-carousel" class="carousel slide carousel-fade" data-interval="false" data-ride="false">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-5 about-pic">
+                    <img src="{{url_for('static', filename='pics/about_pics/sport.jpg')}}" class="img-fluid img-about">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-7 about-text">
+                    <h1>Sport addict</h1>
+                    <p>Since my young age I am passionate about sport.
+                      I love to play, recreationally or competitively.
+                      I also enjoy watching games live or on tv.
+                      Over the years I have practiced many sports, and right now I am mostly playing football, tennis and I run (I participated to three marathons).</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-5 about-pic">
+                    <img src="{{url_for('static', filename='pics/about_pics/photography.jpg')}}" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-7 about-text">
+                    <h1>Photography</h1>
+                    <p>It all started with a christmast gift from my parents: a camera.
+                      Since I am fond of cinema, I thought first to use it to make videos.
+                      But in the process of learning how to use the camera, I got attached to photography, and it is capacity to tell a story with just one captured moment.
+                      I mostly love street photography and portrait, where the stories are to me the most interesting and captivating.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-5 about-pic">
+                    <img src="{{url_for('static', filename='pics/about_pics/masterdegree.jpg')}}" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-7 about-text">
+                    <h1>Master degree</h1>
+                    <p>Graduated in 2011 from ESC Troyes Business School (now called "Y Schools"), I received there a Master degree with Innovation & Entrepreneurship.
+                      I am interested in all the aspect of project management, from organization to finance, from social relationship to technical aspects.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-5 about-pic">
+                    <img src="{{url_for('static', filename='pics/about_pics/volunteer.jpg')}}" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-7 about-text">
+                    <h1>Volunteering</h1>
+                    <p>I believe in helping each ocher and in a proper education for everybody.
+                      I volunteered one year as project manager in a small NGO that helps children in needs, and one year as french teacher in a french association in Serbia.
+                      I also helped children with their homework, teach football to them, and participate to different social projects.
+                      I still occasionnally volunteer.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-5 about-pic">
+                    <img src="{{url_for('static', filename='pics/about_pics/travel.jpg')}}" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-7 about-text">
+                    <h1>Travel</h1>
+                    <p>I am grateful to have the opportunity to travel and meet people from different cultures.<br>
+                    I studied one semester in Michigan.<br>
+                    I had school trips to Berlin, to the North of Italy.<br>
+                    I did a road trip in Norway.<br>
+                    I visited friends and family in Montreal, Madrid, Bratislava, Prague, Den Haag, Saint Petersburg, Moscow, Riga.<br>
+                    I have been now living in Novi Sad, Serbia, for two years.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row">
+                  <div class="col-12 col-md-12 col-lg-5 about-pic">
+                    <img src="{{url_for('static', filename='pics/about_pics/challenges.jpg')}}" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-md-12 col-lg-7 about-text">
+                    <h1>Challenges</h1>
+                    <p>I like to learn and face new challenges.
+                      I stepped in the IT world as a Quality Assurance - Manual tester, and in parallel I started to follow classed about programming.
+                      I really enjoy the challenging aspect of programming and the reasoning behing.
+                      I am now looking for a positiion as web developper.
+                      As new other challenges, I am currently learning serbian language, how to draw and how to be better chess player.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <a class="carousel-control-prev" href="#about-carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#about-carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+{% endblock %}

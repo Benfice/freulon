@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Photo{% endblock %}
+{% block navphoto %}active{% endblock %}
+{% block content %}
+    <div class="photocontainer">
+      <div class="box-photo">
+        <a href="{{url_for('core.street')}}"><img src="{{url_for('static', filename='pics/street.jpg')}}"></a>
+        <span>Street</span>
+      </div>
+      <div class="box-photo">
+        <a href="{{url_for('core.portrait')}}"><img src="{{url_for('static', filename='pics/portrait.jpg')}}"></a>
+        <span>Portrait</span>
+      </div>
+      <div class="box-photo">
+        <a href="{{url_for('core.event')}}"><img src="{{url_for('static', filename='pics/event.jpg')}}"></a>
+        <span>Event</span>
+      </div>
+    </div>
+{% endblock %}

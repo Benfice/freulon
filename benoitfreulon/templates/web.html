@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Web{% endblock %}
+{% block navweb %}active{% endblock %}
+{% block content %}
+    <div class="container-fluid container-web">
+      <div class="jumbotron bg-white text-center">
+          <h1>My web developer journey</h1>
+          <h2>Courses and subjects I follow</h2>
+      </div>
+      <div class="row row-logos justify-content-center">
+        {% for web_logo in web_logos %}
+        <div class="logo col-6 col-sm-4 col-md-3 col-lg-2 col-xl-1">
+          <img src="{{url_for('static', filename='pics/web_logos/' + web_logo)}}" class="img-fluid" alt="logo">
+        </div>
+        {% endfor %}
+      </div>
+      <div class="container container-web">
+        <table class="table table-striped table-hover table-web">
+          <thead>
+            <tr>
+              <th scope="col">Course</th>
+              <th scope="col">Subject</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="https://www.edx.org/course/cs50s-introduction-to-computer-science">
+                CS50's Introduction to Computer Science</a></td>
+              <td>HTML - CSS - JavaScript - Python - SQL - C</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript">
+                CS50's Web Programming with Python and JavaScript</a></td>
+              <td>HTML - CSS - JavaScript - Python - SQL - Django - Git</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.udemy.com/course/formation-complete-python/">
+                La Formation Complète Python</a></td>
+              <td>Python</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.udemy.com/course/python-and-flask-bootcamp-create-websites-using-flask/">
+                Python and Flask Bootcamp: Create Websites using Flask!</a></td>
+              <td>HTML - CSS - Bootstrap - Python - SQL - Flask</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.udemy.com/course/django-3-make-websites-with-python-tutorial-beginner-learn-bootstrap/">
+                Django 3 - Full Stack Websites with Python Web Development</a></td>
+              <td>Python - Django</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.udemy.com/course/javascript-la-formation-ultime/">
+                JavaScript : la formation ULTIME</a></td>
+              <td>JavaScript</td>
+            </tr>
+            <tr>
+              <td><a href="https://www.udemy.com/course/graphic-design-theory-for-beginners-course/">
+                The Complete Graphic Design Theory for Beginners Course</a></td>
+              <td>Graphic Design</td>
+            </tr>
+            <tr>
+              <td>And many other courses on <a href="https://www.udemy.com/">Udemy</a> and <a href="https://openclassrooms.com/">OpenClassRooms</a></td>
+              <td>Programming - Design - Art</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+{% endblock %}

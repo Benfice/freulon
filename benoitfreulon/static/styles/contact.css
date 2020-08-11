@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+	/*
+  background: linear-gradient(
+		rgba(0, 0, 0, 0.5),
+		rgba(0, 0, 0, 0.5)),
+	url("images/home.jpg"); */
+	background: url('/static/pics/contact.jpg');
+  background-repeat: no-repeat;
+	background-position: bottom;
+  background-size: cover;
+	background-attachment: fixed;
+}
+
+body {
+	background: transparent;
+}
+
+.jumbotron-contact {
+	background: transparent;
+}
+
+.jumbotron-contact h1 {
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.jumbotron-contact h2 {
+	text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+/*
+.form-control {
+	background: transparent;
+}
+*/
+
+/*
+.form-group {
+	width: 80%;
+}
+*/
+
+input[type=text]:focus {
+  color: #01949A;
+}
+
+.form-control-label, .form-control {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	color: #01949A;
+}
+
+.btn-form {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+	border: 2px solid #01949A;
+	background-color: white;
+	color: #01949A;
+}
+
+.btn-form:hover {
+	background-color: #01949A;
+	color: white;
+}
+
+.message {
+	  font-family: 'Lato', sans-serif;
+		color: #A84233;
+}

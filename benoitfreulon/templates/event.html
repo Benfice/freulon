@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block cssfile %}<link href="{{url_for('static', filename='styles/lightbox.css')}}" rel="stylesheet" />{% endblock %}
+{% block title %}Photo - Event{% endblock %}
+{% block navphoto %}active{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+      <div class="jumbotron bg-white text-center">
+          <h1>Event</h1>
+      </div>
+    </div>
+
+      <div class="row-gallery">
+        <div class="column-gallery">
+        {% for event_pic in event_pics[::4] %}
+            <a href="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" data-lightbox="event">
+              <img src="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" alt="event picture">
+            </a>
+        {% endfor %}
+        </div>
+
+        <div class="column-gallery">
+        {% for event_pic in event_pics[1::4] %}
+            <a href="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" data-lightbox="event">
+              <img src="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" alt="event picture">
+            </a>
+        {% endfor %}
+        </div>
+
+        <div class="column-gallery">
+        {% for event_pic in event_pics[2::4] %}
+            <a href="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" data-lightbox="event">
+              <img src="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" alt="event picture">
+            </a>
+        {% endfor %}
+        </div>
+
+        <div class="column-gallery">
+        {% for event_pic in event_pics[3::4] %}
+            <a href="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" data-lightbox="event">
+              <img src="{{url_for('static', filename='pics/event_pics/' + event_pic)}}" alt="event picture">
+            </a>
+        {% endfor %}
+        </div>
+
+      </div>
+
+    <script src="{{url_for('static',filename='lightbox-plus-jquery.js')}}"></script>
+{% endblock %}
