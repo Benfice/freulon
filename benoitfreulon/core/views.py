@@ -1,5 +1,5 @@
 import os
-from flask import render_template,redirect, Blueprint, url_for, current_app, flash
+from flask import render_template,redirect, Blueprint, url_for, current_app, flash, request
 from benoitfreulon.core.forms import MessageForm
 from flask_mail import Mail, Message
 from benoitfreulon import app
@@ -51,16 +51,19 @@ def about():
 @core.route('/contact',methods=['GET','POST'])
 def contact():
     form = MessageForm()
-
-    if form.validate_on_submit():
+    if request.method == 'POST':
         name = form.name.data
         email = form.email.data
         message = form.message.data
-        msg = Message('Message from ' + name + ' - ' + email, sender = 'benfice@gmail.com', recipients = ['bfreulon@orange.fr'])
-        msg.body = message
-        mail.send(msg)
-        flash('Sent! Thank you for your message!')
-        return redirect(url_for('core.contact',form=form))
+        if form.validate_on_submit():
+            msg = Message('Message from ' + name + ' - ' + email, sender = 'benfice@gmail.com', recipients = ['bfreulon@orange.fr'])
+            msg.body = message
+            mail.send(msg)
+            flash('Sent! Thank you for your message!')
+            return redirect(url_for('core.contact',form=form))
+        else:
+            flash('Please enter all the fields.')
+            return redirect(url_for('core.contact',form=form))
+
     else:
-        flash('Please enter all the fields.')
-    return render_template('contact.html', form=form)
+        return render_template('contact.html', form=form)
