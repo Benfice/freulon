@@ -1,8 +1,9 @@
 import os
 from flask import render_template,redirect, Blueprint, url_for, current_app, flash, request
-from benoitfreulon.core.forms import MessageForm
 from flask_mail import Mail, Message
+from benoitfreulon.core.forms import MessageForm
 from benoitfreulon import app
+from benoitfreulon.core import courses
 
 core = Blueprint('core',__name__)
 
@@ -42,7 +43,7 @@ def web():
     web_path = os.path.join(current_app.root_path,'static/pics/web_logos')
     web_logos = os.listdir(web_path)
     web_logos.sort()
-    return render_template('web.html', web_logos = web_logos)
+    return render_template('web.html', web_logos = web_logos, list_courses=courses.courses_html)
 
 @core.route('/about')
 def about():
